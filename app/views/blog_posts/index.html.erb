@@ -20,6 +20,7 @@
         <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
         <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= social_share_button_tag("My Home Page", :url => "http://mysite.com/foo") %></td>
+        <td><button id="share_post_button">Share Post</button></td>
       </tr>
     <% end %>
   </tbody>
