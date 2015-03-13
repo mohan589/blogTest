@@ -17,6 +17,7 @@
 	<%= link_to "Sign in", new_user_session_path %>
 	<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
 	<%= link_to "Sign in with Linkedin",user_omniauth_authorize_path(:linkedin) %>
+	<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
 <% end %>
 </body>
 </html>

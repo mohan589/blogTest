@@ -2,6 +2,7 @@
 # Many of these configuration options can be set straight in your model.
 require 'omniauth-twitter'
 require 'omniauth-linkedin'
+require 'omniauth-google-oauth2'
 
 Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
@@ -16,8 +17,9 @@ Devise.setup do |config|
   config.mailer_sender = 'mohan589@gmail.com'
   config.omniauth :linkedin, "78349yyp7ihbem", "2E0s6mBxXzHO2mdX"
   config.omniauth :twitter, "APP_ID", "APP_SECRET"
-  config.oauth_user_token: 'eeabc242-ff1c-474a-a6f2-eb519c967d09', #OAuth Token
-  config.oauth_user_secret: '51ba5c4f-92ef-4e0f-bec0-ac0b1e2937c1' #OAuth Secret:
+  #config.oauth_user_token: 'eeabc242-ff1c-474a-a6f2-eb519c967d09', #OAuth Token
+  #config.oauth_user_secret: '51ba5c4f-92ef-4e0f-bec0-ac0b1e2937c1' #OAuth Secret:
+  config.omniauth :google_oauth2, "337546889466-3iac9pqqgo11vvab1kovnoruohn7m924.apps.googleusercontent.com", "5bKEqeOgYLehev6VsZAPQ4zc", { access_type: "online", approval_prompt: "" }
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
