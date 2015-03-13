@@ -16,6 +16,8 @@ Devise.setup do |config|
   config.mailer_sender = 'mohan589@gmail.com'
   config.omniauth :linkedin, "78349yyp7ihbem", "2E0s6mBxXzHO2mdX"
   config.omniauth :twitter, "APP_ID", "APP_SECRET"
+  config.oauth_user_token: 'eeabc242-ff1c-474a-a6f2-eb519c967d09', #OAuth Token
+  config.oauth_user_secret: '51ba5c4f-92ef-4e0f-bec0-ac0b1e2937c1' #OAuth Secret:
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
