@@ -7,8 +7,10 @@ gem 'rails', '4.2.0'
 gem 'sqlite3'
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-twitter' 
-gem 'omniauth-linkedin' 
+gem 'linkedin'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+gem 'omniauth-google-oauth2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -18,7 +20,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'social-share-button', '~> 0.1.6'
-gem 'omniauth-google-oauth2' 
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -27,7 +29,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'linkedin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
