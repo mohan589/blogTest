@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   resources :blog_posts
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#index'
+  get '/linkedin_share/auth'   => 'linkedin_share#auth' , :method => :get , :as => :linkedin_auth 
+  get '/linkedin_share/callback' => 'linkedin_share#callback' , :method => :get , :as =>  :linkedin_callback
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

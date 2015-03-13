@@ -17,7 +17,25 @@
 //= require_tree .
 
 $(document).ready(function(){
+	var data = '{'+
+				  '"comment": "Check out developer.linkedin.com!",'+
+				  '"content": {'+
+				    '"title": "LinkedIn Developers Resources",'+
+				    '"description": "Leverage LinkedIns APIs to maximize engagement",'+
+				    '"submitted-url": "https://developer.linkedin.com",'+
+				    '"submitted-image-url": "https://example.com/logo.png"'+
+				  '},'+
+				  '"visibility": {'+
+				    '"code": "anyone"'+
+				  '} '+
+				'}';
+
 	$('#share_post_button').click(function(){
-		
+		 $.ajax({
+			  url: "https://api.linkedin.com/v1/people/~/shares?format=json",
+			  data: data
+			}).done(function() {
+			  alert('done');
+		 	});
 	});
 })

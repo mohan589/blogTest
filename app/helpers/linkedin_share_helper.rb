@@ -1,0 +1,2 @@
+module LinkedinShareHelper
+end
